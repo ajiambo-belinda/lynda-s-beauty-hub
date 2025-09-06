@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lynda's Beauty Hub</title>
+  <meta name="description" content="Welcome to Lynda's Beauty Hub, your destination for expert hair styling, skincare, nail care, and personalized beauty treatments." />
+  <meta name="author" content="Lynda's Beauty Hub" />
+  <link rel="stylesheet" href="style.css" />
+<link rel="icon" href="https://cdn.jsdelivr.net/npm/twemoji@11.3.0/2/svg/1f4ab.svg" type="image/svg+xml" />
+
+</head>
+
+<body>
+
+<h1>Lynda's Beauty Hub</h1>
+<button id="message-btn">Click me!</button>
+<p id="message-output"></p>
+
+<main>
+    <!-- services section -->
+    <section id="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Hair Styling and Cutting</li>
+        <li>Manicure and Pedicure</li>
+        <li>Facial Treatments</li>
+        <li>Makeup and Bridal Packages</li>
+        <li>Massage Therapy</li>
+      </ul>
+      <p>Expert care with top-quality products to help you look and feel amazing.</p>
+      <img src="https://cdn.pixabay.com/photo/2024/03/22/17/56/ai-generated-8650235_1280.png" alt="">
+      <img src="https://cdn.pixabay.com/photo/2016/11/16/03/04/wedding-1828065_1280.jpg" alt="">
+      <img src="https://cdn.pixabay.com/photo/2022/09/13/21/47/massage-7452918_1280.jpg" alt="">
+    </section>
+
+    <!-- appointment section -->
+
+    <section id="appointment">
+  <h2>Book an Appointment</h2>
+  <p>Ready to indulge in self-care? Schedule your visit today!</p>
+  <p><em>Note: The booking form appears only when you click "Book Now". The modal is hidden by default (using display:none), so it doesn't show on page load.</em></p>
+  <button id="book-btn">Book Now</button>
+
+  <!-- Modal structure -->
+  <div id="booking-modal" class="modal" style="display:none;">
+
+    <div class="modal-content">
+      <span class="close" id="close-modal">&times;</span>
+      <h2>Book an Appointment</h2>
+      
+      <!-- Booking form -->
+      <form id="booking-form" action="https://formspree.io/f/xrbargoe" method="POST" novalidate>
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name" required />
+        <div class="error" id="name-error"></div>
+
+        <label for="email-booking">Email:</label>
+        <input type="email" id="email-booking" name="email-booking" required />
+        <div class="error" id="email-error"></div>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required />
+        <div class="error" id="phone-error"></div>
+
+        <label for="appointment-date">Preferred Date:</label>
+        <input type="date" id="appointment-date" name="appointment-date" required />
+        <div class="error" id="date-error"></div>
+
+        <button type="submit">Submit Booking</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<!-- testimonial section -->
+    <section id="testimonials">
+      <h2>Client Testimonials</h2>
+      <blockquote>"Lynda's Beauty Hub transformed my look and boosted my confidence!" - Sarah K.</blockquote>
+      <blockquote>"Professional, welcoming, and talented – highly recommend." - James T.</blockquote>
+    </section>
+  </main>
+
+<button id="toggle-mode-btn">Toggle Light/Dark Mode</button>
+<p id="mode-info">Click the button to switch between light and dark modes for this page.</p>
+
+
+<div class="faq-item">
+  <div class="faq-question">What is Lynda's Beauty Hub?</div>
+  <div class="faq-answer">Lynda's Beauty Hub is a welcoming and professional beauty salon dedicated to enhancing your natural beauty through expert hair styling, skincare, nail care, and personalized beauty treatments. Our mission is to provide a relaxing, inclusive, and high-quality experience that leaves you feeling confident and refreshed. We use top-of-the-line products and tailor our services to suit your unique style and needs, making every visit a special occasion for self-care and transformation. Whether you're looking for a new look, a relaxing facial, or a manicure, Lynda's Beauty Hub is your go-to destination for beauty and wellness. </div>
+</div>
+<div class="faq-item">
+  <div class="faq-question"> What services does Lynda's Beauty Hub offer?</div>
+  <div class="faq-answer"> Lynda's Beauty Hub offers expert hair styling, skincare treatments, manicures, makeup services, and personalized beauty consultations to help you look and feel your best.</div>
+</div>
+
+<div class="dropdown">
+  <label for="dropdown-select">Choose a Service:</label>
+  <select id="dropdown-select">
+    <option value="">--Select a Service--</option>
+    <option value="hair-styling">Hair Styling & Cutting</option>
+    <option value="manicure-pedicure">Manicure & Pedicure</option>
+    <option value="facial-treatments">Facial Treatments</option>
+    <option value="makeup-bridal">Makeup & Bridal Packages</option>
+    <option value="massage-therapy">Massage Therapy</option>
+  </select>
+  <p id="dropdown-output"></p>
+</div>
+
+
+
+  <div id="tab1" class="tab-content active">
+    <h3>Hair Styling & Cutting</h3>
+    <p>Expert haircuts, styling, coloring, and treatments tailored just for you.</p>
+  </div>
+  <div id="tab2" class="tab-content" style="display:none;">
+    <h3>Manicure & Pedicure</h3>
+    <p>Relaxing nail care, polish, and spa treatments to keep your hands and feet gorgeous.</p>
+  </div>
+  <div id="tab3" class="tab-content" style="display:none;">
+    <h3>Facial Treatments</h3>
+    <p>Rejuvenate your skin with customized facials and skincare solutions.</p>
+  </div>
+  <div id="tab4" class="tab-content" style="display:none;">
+    <h3>Makeup & Bridal Packages</h3>
+    <p>Professional makeup for all occasions including weddings and photoshoots.</p>
+  </div>
+  <div id="tab5" class="tab-content" style="display:none;">
+    <h3>Massage Therapy</h3>
+    <p>Calming and therapeutic massages to relax your body and mind.</p>
+  </div>
+</div>
+<form id="consultationForm" action="https://formspree.io/f/xrbargoe" method="POST" novalidate>
+  <h2>Consultation Contact Form</h2>
+
+  <label for="full-name">Full Name:</label>
+  <input type="text" id="full-name" name="full-name" required />
+  <div id="name-error" class="error"></div>
+
+  <label for="email-consult">Email:</label>
+  <input type="email" id="email-consult" name="email-consult" required />
+  <div id="email-error" class="error"></div>
+
+  <label for="phone-consult">Phone Number:</label>
+  <input type="tel" id="phone-consult" name="phone-consult" />
+  <div id="phone-error" class="error"></div>
+
+  <label for="preferred-date">Preferred Consultation Date:</label>
+  <input type="date" id="preferred-date" name="preferred-date" required />
+  <div id="date-error" class="error"></div>
+
+  <label for="consultation-topic">Consultation Topic:</label>
+  <input type="text" id="consultation-topic" name="consultation-topic" required />
+  <div id="topic-error" class="error"></div>
+
+  <label for="additional-info">Additional Information:</label>
+  <textarea id="additional-info" name="additional-info" rows="4"></textarea>
+
+  <button type="submit">Submit Consultation Request</button>
+
+  <p id="form-success" class="success"></p>
+</form>
+<footer id="footer">
+    <p>&copy; 2025 Lynda's Beauty Hub. All rights reserved.</p>
+    <p>Contact us: info@lyndasbeautyhub.com | Phone: (074) 285-5714</p>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
